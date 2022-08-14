@@ -1,0 +1,102 @@
+==4918== Memcheck, a memory error detector
+==4918== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4918== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==4918== Command: ./phonebook
+==4918== Parent PID: 4896
+==4918== 
+==4918== 
+==4918== Process terminating with default action of signal 1 (SIGHUP)
+==4918==    at 0x497E990: read (read.c:26)
+==4918==    by 0x48F6CB5: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:516)
+==4918==    by 0x48F7E15: _IO_default_uflow (genops.c:362)
+==4918==    by 0x10938C: main (phonebook.c:56)
+==4918==    by 0x4893D8F: __libc_start_call_main (libc_start_call_main.h:58)
+==4918==    by 0x4893E3F: __libc_start_main@@GLIBC_2.34 (libc-start.c:392)
+==4918==    by 0x1091C4: _start (in /home/elhanan/Downloads/phonbook-students/phonebook)
+==4918==    by 0x1FFEFFFFD7: ???
+==4918==    by 0x1B: ???
+==4918== 
+==4918== HEAP SUMMARY:
+==4918==     in use at exit: 2,439 bytes in 6 blocks
+==4918==   total heap usage: 6 allocs, 0 frees, 2,439 bytes allocated
+==4918== 
+==4918== 31 bytes in 1 blocks are definitely lost in loss record 1 of 6
+==4918==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4918==    by 0x1094AE: insert (phonebook.c:101)
+==4918==    by 0x1093C0: main (phonebook.c:59)
+==4918==    by 0x4893D8F: __libc_start_call_main (libc_start_call_main.h:58)
+==4918==    by 0x4893E3F: __libc_start_main@@GLIBC_2.34 (libc-start.c:392)
+==4918==    by 0x1091C4: _start (in /home/elhanan/Downloads/phonbook-students/phonebook)
+==4918==    by 0x1FFEFFFFD7: ???
+==4918==    by 0x1B: ???
+==4918== 
+==4918== 120 bytes in 1 blocks are definitely lost in loss record 2 of 6
+==4918==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4918==    by 0x48EA1A2: getdelim (iogetdelim.c:62)
+==4918==    by 0x10951E: insert (phonebook.c:109)
+==4918==    by 0x1093C0: main (phonebook.c:59)
+==4918==    by 0x4893D8F: __libc_start_call_main (libc_start_call_main.h:58)
+==4918==    by 0x4893E3F: __libc_start_main@@GLIBC_2.34 (libc-start.c:392)
+==4918==    by 0x1091C4: _start (in /home/elhanan/Downloads/phonbook-students/phonebook)
+==4918==    by 0x1FFEFFFFD7: ???
+==4918==    by 0x1B: ???
+==4918== 
+==4918== 120 bytes in 1 blocks are definitely lost in loss record 3 of 6
+==4918==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4918==    by 0x48EA1A2: getdelim (iogetdelim.c:62)
+==4918==    by 0x109B4B: edit (phonebook.c:197)
+==4918==    by 0x1093CE: main (phonebook.c:65)
+==4918==    by 0x4893D8F: __libc_start_call_main (libc_start_call_main.h:58)
+==4918==    by 0x4893E3F: __libc_start_main@@GLIBC_2.34 (libc-start.c:392)
+==4918==    by 0x1091C4: _start (in /home/elhanan/Downloads/phonbook-students/phonebook)
+==4918==    by 0x1FFEFFFFD7: ???
+==4918==    by 0x1B: ???
+==4918== 
+==4918== 120 bytes in 1 blocks are definitely lost in loss record 4 of 6
+==4918==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4918==    by 0x48EA1A2: getdelim (iogetdelim.c:62)
+==4918==    by 0x109B7D: edit (phonebook.c:199)
+==4918==    by 0x1093CE: main (phonebook.c:65)
+==4918==    by 0x4893D8F: __libc_start_call_main (libc_start_call_main.h:58)
+==4918==    by 0x4893E3F: __libc_start_main@@GLIBC_2.34 (libc-start.c:392)
+==4918==    by 0x1091C4: _start (in /home/elhanan/Downloads/phonbook-students/phonebook)
+==4918==    by 0x1FFEFFFFD7: ???
+==4918==    by 0x1B: ???
+==4918== 
+==4918== 1,024 bytes in 1 blocks are still reachable in loss record 5 of 6
+==4918==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4918==    by 0x48E8C23: _IO_file_doallocate (filedoalloc.c:101)
+==4918==    by 0x48F7D5F: _IO_doallocbuf (genops.c:347)
+==4918==    by 0x48F6FDF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+==4918==    by 0x48F5754: _IO_new_file_xsputn (fileops.c:1243)
+==4918==    by 0x48F5754: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+==4918==    by 0x48EAF9B: puts (ioputs.c:40)
+==4918==    by 0x1092B4: main (phonebook.c:43)
+==4918==    by 0x4893D8F: __libc_start_call_main (libc_start_call_main.h:58)
+==4918==    by 0x4893E3F: __libc_start_main@@GLIBC_2.34 (libc-start.c:392)
+==4918==    by 0x1091C4: _start (in /home/elhanan/Downloads/phonbook-students/phonebook)
+==4918==    by 0x1FFEFFFFD7: ???
+==4918==    by 0x1B: ???
+==4918== 
+==4918== 1,024 bytes in 1 blocks are still reachable in loss record 6 of 6
+==4918==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4918==    by 0x48E8C23: _IO_file_doallocate (filedoalloc.c:101)
+==4918==    by 0x48F7D5F: _IO_doallocbuf (genops.c:347)
+==4918==    by 0x48F6D5B: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+==4918==    by 0x48F7E15: _IO_default_uflow (genops.c:362)
+==4918==    by 0x10937A: main (phonebook.c:55)
+==4918==    by 0x4893D8F: __libc_start_call_main (libc_start_call_main.h:58)
+==4918==    by 0x4893E3F: __libc_start_main@@GLIBC_2.34 (libc-start.c:392)
+==4918==    by 0x1091C4: _start (in /home/elhanan/Downloads/phonbook-students/phonebook)
+==4918==    by 0x1FFEFFFFD7: ???
+==4918==    by 0x1B: ???
+==4918== 
+==4918== LEAK SUMMARY:
+==4918==    definitely lost: 391 bytes in 4 blocks
+==4918==    indirectly lost: 0 bytes in 0 blocks
+==4918==      possibly lost: 0 bytes in 0 blocks
+==4918==    still reachable: 2,048 bytes in 2 blocks
+==4918==         suppressed: 0 bytes in 0 blocks
+==4918== 
+==4918== For lists of detected and suppressed errors, rerun with: -s
+==4918== ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0)
